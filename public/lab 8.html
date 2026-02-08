@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A-Frame AR Marker (New 3D Output)</title>
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin:0; overflow:hidden;">
+  <a-scene
+    embedded
+    vr-mode-ui="enabled:false"
+    arjs="sourceType: webcam; debugUIEnabled:false;"
+  >
+
+    <a-marker type="pattern" url="pattern-hiro.patt">
+
+      <!-- Icosahedron -->
+      <a-icosahedron
+        position="0 0.6 0"
+        radius="0.45"
+        color="#9c27b0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
+      </a-icosahedron>
+
+      <!-- Octahedron -->
+      <a-octahedron
+        position="1.2 0.6 0"
+        radius=
